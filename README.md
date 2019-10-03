@@ -1,1 +1,1 @@
-# Komanda Frontend
+# Lounge Management - Frontend
