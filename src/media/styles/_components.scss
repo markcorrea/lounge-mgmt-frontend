@@ -1,0 +1,220 @@
+.product-search-input-container {
+  position: relative;
+  z-index: 10;
+  .product-search-box {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid #e3e6f0;
+    border-radius: 0.35rem;
+    color: #858796;
+    float: left;
+    font-size: 0.85rem;
+    left: 0;
+    list-style: none;
+    margin: 0.125rem 0 0;
+    min-height: 100px;
+    min-width: 10rem;
+    padding: 0.6rem 0;
+    position: absolute;
+    right: 0;
+    text-align: left;
+    top: 43px;
+    width: 100%;
+    table {
+      width: 100%;
+      tr {
+        border-bottom: solid 15px white;
+        &:last-child {
+          border-bottom: solid 0 transparent;
+        }
+      }
+      td {
+        border-left: solid thin #cccccc;
+        padding: 0 10px;
+        &:first-child {
+          border-left: transparent;
+        }
+        &:last-child {
+          width: 80px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+.total-price {
+  border: solid thin #ffffff;
+  border-radius: 10px;
+  background-color: #ffffff;
+  width: 100%;
+  font-size: 1.5rem;
+  color: #5a5c69;
+  font-weight: 600;
+  text-align: right;
+  padding: 5px 10px;
+}
+
+.react-button-icon {
+  padding: 0.575rem 0.75rem !important;
+}
+
+.modal-container {
+  padding: 20px;
+}
+
+.table-filter {
+  text-align: right;
+  label {
+    font-weight: normal;
+    white-space: nowrap;
+    text-align: left;
+  }
+  
+  input {
+    margin-left: 0.5em;
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.dataTable {
+  tr:hover {
+    background-color: $backgroundHover;
+  }
+  td.total{
+    text-align: right;
+    padding-right: 30px;
+    .total-value {
+      font-weight: 700;
+    }
+  } 
+  td.icon {
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      .edit {
+        color: $standardBlue;
+        opacity: 0.8;
+      }
+      .remove {
+        color: $standardRed;
+        opacity: 0.8;
+      }
+      .payment {
+        color: $standardGreen;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+
+.ticket-card {
+  &:hover {
+    background-color: $backgroundHover;
+  }
+}
+
+.form-button {
+  width: 100%;
+}
+
+.card-body-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.hide-menu {
+  display: none;
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  from {transform:rotate(0deg);}
+  to {transform:rotate(360deg);}
+}
+
+.spinner {
+  margin: 20px auto;
+  width: min-content;
+  height: min-content;
+  -webkit-animation-name: spin;
+  -webkit-animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: spin;
+  -moz-animation-duration: 1500ms;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: spin;
+  -ms-animation-duration: 1500ms;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-transition: rotate(3600deg);
+  i {
+    font-size: 30px;
+    color: #4e73df;
+    opacity: 0.7;
+  }
+}
+
+.inline-button {
+  span.text {
+    display: none
+  }
+}
+
+.right-button {
+  margin-bottom: 20px;
+}
+
+.terminal-size {
+  font-size: 30px;
+}
+
+.logout-icon {
+  width: 30px;
+  height: 30px;
+  padding: 7px 0;
+  i {
+    color: #4e73df;
+  }
+}
+
+@media(min-width: $viewportSm) {
+  .form-button {
+    width: initial;
+    float: right;
+    margin-left: 20px;
+    margin-top: 20px;
+    padding: 0 20px;
+    &.btn-light {
+      padding: 0;
+    }
+  }
+  .inline-button {
+    width: min-content;
+    span.text {
+      display: block
+    }
+  }
+  .right-button {
+    float: right;
+  }
+}
+
+@media(min-width: $viewportSm) {
+  .hide-menu {
+    display: block;
+  }
+}

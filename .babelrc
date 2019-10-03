@@ -1,0 +1,37 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "entry"
+      }
+    ],
+    "@babel/preset-react"
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "@babel/plugin-proposal-class-properties",
+      {
+        "loose": true
+      }
+    ],
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "@modules": "./src/modules",
+          "@services": "./src/services",
+          "@ui": "./src/ui",
+          "@utilities": "./src/utilities",
+          "@audio": "./src/media/sound"
+        }
+      }
+    ]
+  ]
+}

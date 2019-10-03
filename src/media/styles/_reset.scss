@@ -1,0 +1,31 @@
+body {
+  #root {
+    min-height: 100%;
+    #wrapper {
+      min-height: 100%;
+    }
+  }
+}
+
+.bg-gradient-primary {
+  min-height: 100%;
+}
+
+.p-5 {
+  padding: 3rem 1rem !important;
+}
+
+.bg-login-image {
+  background-size: contain;
+}
+
+.h3 {
+  font-size: 1.35rem;
+  margin-bottom: 20px;
+}
+
+@media(min-width: $viewportSm) {
+  .h3 {
+    font-size: 1.75rem;
+  }
+}

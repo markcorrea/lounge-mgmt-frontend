@@ -1,0 +1,94 @@
+$standardRed: #e74a3b;
+$standardBlue: #4e73df;
+$standardYellow: #f6c23e;
+$standardGreen: #1cc88a;
+$backgroundHover: #f8f9fc;
+
+$viewportSm: 768px;
+$viewportMd: 1204px;
+
+a {
+  cursor: pointer !important;
+  &:hover{
+    text-decoration: none !important;
+  }
+}
+
+// margin-top
+.mt-10 {
+  margin-top: 10px;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 40px;
+}
+
+.mt-50 {
+  margin-top: 50px;
+}
+
+.ml-20 {
+  margin-left: 20px;
+}
+
+// margin-bottom
+.mb-30 {
+  margin-bottom: 30px !important;
+}
+
+// margin-right
+.mr-20 {
+  margin-right: 20px;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.logo-name {
+  margin-left: 5px;
+}
+
+@media(max-width: 768px) {
+  .margin-xs {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .logo-name {
+    display: none;
+  }
+}
+
+@media(min-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+}
