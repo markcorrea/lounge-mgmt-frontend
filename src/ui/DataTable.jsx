@@ -66,7 +66,7 @@ const DataTable = props => {
   let idToDelete = null
 
   const DeleteInformation = items => {
-    return `Deseja remover este item?`
+    return `Remove this item?`
   }
 
   const confirmDelete = _id => {
@@ -107,7 +107,7 @@ const DataTable = props => {
       </table>
       <ChoiceModal
         id='deleteModal'
-        title='Confirmação'
+        title='Confirmation'
         description={<DeleteInformation />}
         onConfirm={() => props.onDelete(idToDelete)}
       />

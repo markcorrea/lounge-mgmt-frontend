@@ -97,7 +97,7 @@ class EditTicket extends React.Component {
       this.setState({disabled: false})
       return
     }
-    showMessage('Produto não encontrado', 'info')
+    showMessage('Product not found', 'info')
     this.setState({disabled: false})
   }
 
@@ -109,7 +109,7 @@ class EditTicket extends React.Component {
       this.props.history.push(`/main/edit-ticket/${nextTable}`)
       return
     }
-    showMessage('Houve um erro ao mudar a mesa', 'info')
+    showMessage('Error: could not change the table.', 'info')
   }
 
   render() {
@@ -121,10 +121,10 @@ class EditTicket extends React.Component {
           onClick={() => openModal('inputModal')}
           className='btn btn-success btn-icon-split'
         >
-          <span className='text'>Mudar mesa</span>
+          <span className='text'>Cange table</span>
         </button>
         <h1 className='h3 text-gray-800'>
-          Editar Comanda {this.props.match.params.uniqueNumber}
+          Edit ticket {this.props.match.params.uniqueNumber}
         </h1>
         <p className='mb-4'>
           Cliente:{' '}
@@ -156,7 +156,7 @@ class EditTicket extends React.Component {
             <Spinner />
           ) : (
             <div style={{ margin: '20px auto' }}>
-              Não há pedidos cadastrados
+              No registered orders.
             </div>
           )}
         </div>
@@ -177,7 +177,7 @@ class EditTicket extends React.Component {
           <div className='modal-dialog modal-xl'>
             <div className='modal-content'>
               <div className='modal-container'>
-                <h1 className='h3 mb-0 text-gray-800'>Novo Cliente</h1>
+                <h1 className='h3 mb-0 text-gray-800'>New client</h1>
                 <div className='row mt-50'>
                   <div className='col-md-12' style={{ zIndex: 10 }}>
                     <AsyncClientSearch
@@ -230,14 +230,14 @@ class EditTicket extends React.Component {
                       style={{ marginLeft: '20px', float: 'right' }}
                       className='btn btn-primary btn-icon-split react-link'
                     >
-                      <span className='text'>Salvar</span>
+                      <span className='text'>Save</span>
                     </a>
                     <a
                       onClick={this.toggleModal}
                       style={{ marginLeft: '20px', float: 'right' }}
                       className='btn btn-light btn-icon-split'
                     >
-                      <span className='text'>Cancelar</span>
+                      <span className='text'>Cancel</span>
                     </a>
                   </div>
                 </div>

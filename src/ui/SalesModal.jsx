@@ -14,11 +14,11 @@ const SalesModal = ({ id, title, cashierId }) => {
 
   const columns = [
     {
-      label: 'Produto',
+      label: 'Product',
       name: 'name',
     },
     {
-      label: 'Valor',
+      label: 'Price',
       name: 'totalPrice',
     },
   ]
@@ -81,9 +81,9 @@ const SalesModal = ({ id, title, cashierId }) => {
                 >
                   <thead>
                     <tr>
-                      <th>Nome</th>
-                      <th>Valor</th>
-                      <th>Confirma</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Confirm</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -103,7 +103,7 @@ const SalesModal = ({ id, title, cashierId }) => {
                     ))}
                     {productList.length < 1 && (
                       <tr>
-                        <td colSpan={6}>Não há itens cadastrados.</td>
+                        <td colSpan={6}>No items registered.</td>
                       </tr>
                     )}
                   </tbody>
@@ -124,8 +124,8 @@ const SalesModal = ({ id, title, cashierId }) => {
       </div>
       <ChoiceModal
         id='confirmSale'
-        title='Confirma venda?'
-        description='Deseja confirmar a venda?'
+        title='Confirm sale?'
+        description='Confirm sale?'
         onConfirm={() => confirmSale()}
       />
     </div>

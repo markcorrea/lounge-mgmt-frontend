@@ -21,7 +21,7 @@ const Login = ({ history }) => {
     if (loginStatus) {
       history.push('/main')
     } else {
-      alert('Não autorizado')
+      alert('Unauthorized')
     }
   }
 
@@ -46,7 +46,7 @@ const Login = ({ history }) => {
                             className='form-control form-control-user'
                             id='exampleInputEmail'
                             aria-describedby='emailHelp'
-                            placeholder='Digite seu e-mail...'
+                            placeholder='E-mail here...'
                             name='email'
                             value={loginData.email}
                             onChange={handleInputChange}
@@ -57,7 +57,7 @@ const Login = ({ history }) => {
                             type='password'
                             className='form-control form-control-user'
                             id='exampleInputPassword'
-                            placeholder='Senha'
+                            placeholder='Password'
                             name='password'
                             value={loginData.password}
                             onChange={handleInputChange}
@@ -72,7 +72,7 @@ const Login = ({ history }) => {
                       </form>
                       <div className='text-center'>
                         <a className='small' href='forgot-password.html'>
-                          Esqueci minha senha
+                          Forgot my password
                         </a>
                       </div>
                     </div>

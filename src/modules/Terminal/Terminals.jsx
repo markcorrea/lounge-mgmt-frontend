@@ -34,8 +34,8 @@ const Terminals = ({ history }) => {
 
   return (
     <Fragment>
-      <h1 className='h3 mb-2 text-gray-800'>Terminais</h1>
-      <p className='mb-4'>Listagem de terminais disponíveis.</p>
+      <h1 className='h3 mb-2 text-gray-800'>Terminals</h1>
+      <p className='mb-4'>List of available terminals.</p>
 
       <div className='card shadow mb-4'>
         <div className='card-body'>

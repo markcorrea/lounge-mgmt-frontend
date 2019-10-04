@@ -32,10 +32,10 @@ const ChoiceModal = ({id, title, description, onConfirm}) => {
               className='btn btn-secondary'
               onClick={() => closeModal(id)}
             >
-              Cancelar
+              No thanks
             </button>
             <button type='button' className='btn btn-primary' onClick={clickConfirm}>
-              Confirmar
+              Confirm
             </button>
           </div>
         </div>

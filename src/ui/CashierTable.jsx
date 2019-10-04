@@ -41,7 +41,7 @@ const RenderRows = ({ columns, data, clickRow }) => {
       ))}
       {data.length < 1 && (
         <tr>
-          <td colSpan={6}>Não há itens pendentes.</td>
+          <td colSpan={6}>There are no pending items.</td>
         </tr>
       )}
     </Fragment>
@@ -62,11 +62,11 @@ const CashierTable = props => {
   }
 
   const BodyInformation = () => {
-    return `Confirmar operação?`
+    return `Confirm operation?`
   }
 
   const InputModalInformation = () => {
-    return `Insira o valor a creditar:`
+    return `Insert the value to credit:`
   }
 
   const confirmInputModal = (input) => {
@@ -134,13 +134,13 @@ const CashierTable = props => {
       </button>
       <ChoiceModal
         id='choiceModal'
-        title='Confirmação'
+        title='Confirmation'
         description={<BodyInformation />}
         onConfirm={() => props.returnCashierTable(itemsToReturn, operation)}
       />
       <CurrencyInputModal
         id='inputModal'
-        title='Insira o valor'
+        title='Insert value'
         description={<InputModalInformation />}
         onConfirm={(input) => confirmInputModal(input)}
       />

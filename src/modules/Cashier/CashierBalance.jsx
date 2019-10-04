@@ -11,15 +11,15 @@ const CashierBalance = ({ match: { params }, history, userData }) => {
 
   const columns = [
     {
-      label: 'Produto',
+      label: 'Product',
       name: 'name',
     },
     {
-      label: 'Comanda',
+      label: 'Ticket',
       name: 'uniqueCode',
     },
     {
-      label: 'Valor',
+      label: 'Price',
       name: 'price',
       display: 'currency'
     },
@@ -45,13 +45,13 @@ const CashierBalance = ({ match: { params }, history, userData }) => {
       history.push(`/main/cashiers`)
       return
     }
-    showMessage('Houve um erro ao fechar o caixa', 'info')
+    showMessage('Error: could not close the cashier', 'info')
   }
 
   return (
     <Fragment>
-      <h1 className='h3 mb-2 text-gray-800'>Caixa - Fechamento</h1>
-      <p className='mb-4'>Lista de recebimentos.</p>
+      <h1 className='h3 mb-2 text-gray-800'>Cashier - Balance</h1>
+      <p className='mb-4'>List of Sales.</p>
 
       <div className='card shadow mb-4'>
         <div className='card-body'>
@@ -82,20 +82,20 @@ const CashierBalance = ({ match: { params }, history, userData }) => {
             className='btn btn-primary btn-icon-split react-link form-button'
             onClick={() => openModal('closeCashier')}
           >
-            <span className='text'>Fechar caixa</span>
+            <span className='text'>Close cashier</span>
           </button>
           <a
             className='btn btn-light btn-icon-split form-button'
             onClick={() => history.push(`/main/cashier/${cashierId}`)}
           >
-            <span className='text'>Cancelar</span>
+            <span className='text'>No thanks</span>
           </a>
         </div>
       </div>
       <ChoiceModal
         id='closeCashier'
-        title='Fechar caixa'
-        description='Confirma fechamento de caixa?'
+        title='Close cashier'
+        description='Confirm closing this cashier?'
         onConfirm={() => closeCurrentCashier()}
       />
     </Fragment>

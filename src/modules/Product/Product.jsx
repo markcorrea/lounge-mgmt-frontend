@@ -42,7 +42,7 @@ const Product = ({ match: { params }, history }) => {
       }
     }
 
-    alert('Produto não encontrado')
+    alert('Product not found')
     history.push('/main/products')
   }
 
@@ -57,7 +57,7 @@ const Product = ({ match: { params }, history }) => {
     const result = await service(body)
     if (result) {
     } else {
-      showMessage('Houve um erro ao cadastrar o produto', 'error')
+      showMessage('Error: could not register product', 'error')
       return
     }
     history.push('/main/products')
@@ -67,14 +67,14 @@ const Product = ({ match: { params }, history }) => {
     <Fragment>
       <div className='row d-sm-flex align-items-center justify-content-between mb-4'>
         <h1 className='h3 mb-0 text-gray-800'>
-          {productId ? 'Editar' : 'Novo'} Produto
+          {productId ? 'Edit' : 'New'} Product
         </h1>
       </div>
 
       <div className='row'>
         <div className='col-md-6 col-sm-12'>
           <div className='form-group'>
-            <div className='small mb-1'>Nome:</div>
+            <div className='small mb-1'>Name:</div>
             <input
               name='name'
               type='text'
@@ -86,7 +86,7 @@ const Product = ({ match: { params }, history }) => {
         </div>
         <div className='col-md-6 col-sm-12'>
           <div className='form-group'>
-            <div className='small mb-1'>Código de Barras:</div>
+            <div className='small mb-1'>Barcode:</div>
             <input
               name='barCode'
               type='text'
@@ -98,7 +98,7 @@ const Product = ({ match: { params }, history }) => {
         </div>
         <div className='col-md-3 col-sm-12'>
           <div className='form-group'>
-            <div className='small mb-1'>Código Rápido:</div>
+            <div className='small mb-1'>Rapid code:</div>
             <input
               name='uniqueCode'
               type='number'
@@ -110,7 +110,7 @@ const Product = ({ match: { params }, history }) => {
         </div>
         <div className='col-md-3 col-sm-12'>
           <div className='form-group'>
-            <div className='small mb-1'>Quantidade:</div>
+            <div className='small mb-1'>Quantity:</div>
             <input
               name='quantity'
               type='number'
@@ -122,7 +122,7 @@ const Product = ({ match: { params }, history }) => {
         </div>
         <div className='col-md-3 col-sm-12'>
           <div className='form-group'>
-            <div className='small mb-1'>Preço:</div>
+            <div className='small mb-1'>Price:</div>
             <CurrencyInput
               name='price'
               type='text'
@@ -141,7 +141,7 @@ const Product = ({ match: { params }, history }) => {
               onChange={handleInputChange}
               className='form-control'
             >
-              <option value=''>Selecione...</option>
+              <option value=''>Select...</option>
               {terminals.map((terminal, index) => (
                 <option key={`terminal_${index}`} value={terminal._id}>
                   {terminal.name}
@@ -157,13 +157,13 @@ const Product = ({ match: { params }, history }) => {
             className='btn btn-success btn-icon-split react-link form-button'
             onClick={() => save(product)}
           >
-            <span className='text'>Salvar</span>
+            <span className='text'>Save</span>
           </a>
           <a
             className='btn btn-light btn-icon-split form-button'
             onClick={() => history.push('/main/products')}
           >
-            <span className='text'>Cancelar</span>
+            <span className='text'>Cancel</span>
           </a>
         </div>
       </div>

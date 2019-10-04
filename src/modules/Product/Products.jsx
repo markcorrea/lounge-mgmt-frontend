@@ -37,7 +37,7 @@ const Products = ({ history }) => {
   const removeProduct = async _id => {
     const result = await deleteProduct(_id)
     if (!result) {
-      showMessage('Houve um erro ao remover o produto.', 'error')
+      showMessage('Error: could not remove product.', 'error')
       return
     }
     fetchProducts()
@@ -50,11 +50,11 @@ const Products = ({ history }) => {
 
   const columns = [
     {
-      label: 'Nome',
+      label: 'Name',
       name: 'name',
     },
     {
-      label: 'Quantidade',
+      label: 'Quantity',
       name: 'quantity',
     },
     {
@@ -62,7 +62,7 @@ const Products = ({ history }) => {
       name: 'terminal',
     },
     {
-      label: 'Preço',
+      label: 'Price',
       name: 'price',
       display: 'currency'
     },
@@ -81,11 +81,11 @@ const Products = ({ history }) => {
         >
           <i className='fas fa-plus' />
         </span>
-        <span className='text'>Novo Produto</span>
+        <span className='text'>New Product</span>
       </Link>
-      <h1 className='h3 mb-2 text-gray-800'>Produtos</h1>
+      <h1 className='h3 mb-2 text-gray-800'>Products</h1>
       <p className='mb-4'>
-        Listagem de produtos disponíveis. Filtre para facilitar a busca.
+        List of available products. Filtering can make it easier.
       </p>
 
       <div className='card shadow mb-4'>

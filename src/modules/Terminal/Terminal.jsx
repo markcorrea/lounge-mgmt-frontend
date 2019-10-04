@@ -69,7 +69,7 @@ const Terminal = ({ match: { params } }) => {
   return (
     <Fragment>
       <h1 className='h3 mb-2 text-gray-800'>Terminal: {terminalName}</h1>
-      {orders && orders.length > 0 ? <OrderList /> : <div>Não há pedidos pendentes</div>}
+      {orders && orders.length > 0 ? <OrderList /> : <div>There are no pending orders.</div>}
     </Fragment>
   )
 }

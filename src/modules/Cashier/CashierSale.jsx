@@ -48,24 +48,24 @@ const CashierSale = ({ match: { params }, history }) => {
       history.push(`/main/cashier/${cashierId}`)
       return
     }
-    showMessage('Houve um erro ao tentar realizar o pagamento.', 'info')
+    showMessage('Error: could not register payment.', 'info')
     return
   }
 
   const ConfirmInformation = () => {
-    return `Confirma o pagamento destes itens?`
+    return `Confirm paying these items?`
   }
 
   return (
     <Fragment>
-      <h1 className='h3 mb-2 text-gray-800'>Caixa - Registrar Venda</h1>
+      <h1 className='h3 mb-2 text-gray-800'>Cashier - New Sale</h1>
       <p className='mb-4'>
-        Adicione os produtos à tabela para registrar a venda.
+        Add products to the table to register the sale.
       </p>
 
       <div className='card shadow mb-4'>
         <div className='card-body'>
-          <div className='card-body-title'>Adicionar produto</div>
+          <div className='card-body-title'>Add product</div>
           <div className='table-responsive'>
             <div className='row'>
               <div className='col-md-12'>
@@ -83,7 +83,7 @@ const CashierSale = ({ match: { params }, history }) => {
 
       <div className='card shadow mb-4'>
         <div className='card-body'>
-          <div className='card-body-title'>Em aberto</div>
+          <div className='card-body-title'>Opened</div>
           <div className='table-responsive'>
             <div className='row'>
               <div className='col-md-12'>
@@ -95,16 +95,16 @@ const CashierSale = ({ match: { params }, history }) => {
                 >
                   <thead>
                     <tr>
-                      <th>Nome</th>
-                      <th>Valor</th>
-                      <th>Remover</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Remove</th>
                     </tr>
                   </thead>
                   <tbody>
                     {products.length < 1 && (
                       <tr>
                         <td colSpan={3}>
-                          Não há produtos adicionados para venda.
+                          No products added for sale.
                         </td>
                       </tr>
                     )}
@@ -156,7 +156,7 @@ const CashierSale = ({ match: { params }, history }) => {
       </div>
       <ChoiceModal
         id='confirmModal'
-        title='Confirmação'
+        title='Confirmation'
         description={<ConfirmInformation />}
         onConfirm={() => onConfirm()}
       />

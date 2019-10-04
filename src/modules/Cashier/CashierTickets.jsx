@@ -39,21 +39,21 @@ const CashierTickets = ({ match: { params }, history }) => {
       }
     }
 
-    alert('Caixa não encontrado')
+    alert('Cashier not found')
     history.push('/main/cashiers')
   }
 
   const columns = [
     {
-      label: 'Mesa',
+      label: 'Table',
       name: 'uniqueNumber',
     },
     {
-      label: 'Cliente',
+      label: 'Client',
       name: 'name',
     },
     {
-      label: 'Valor',
+      label: 'Price',
       name: 'totalPrice',
       display: 'currency',
     },
@@ -71,7 +71,7 @@ const CashierTickets = ({ match: { params }, history }) => {
         to={`/main/cashier/${cashierId}/balance`}
         className='btn btn-success btn-icon-split'
       >
-        <span className='text'>Fechamento</span>
+        <span className='text'>Balance</span>
       </Link>
       {!cashier.closeDate && (
         <Link
@@ -79,11 +79,11 @@ const CashierTickets = ({ match: { params }, history }) => {
           style={{ float: 'right', marginLeft: '20px' }}
           className='btn btn-primary btn-icon-split react-link'
         >
-          <span className='text'>Registrar venda</span>
+          <span className='text'>Register sale</span>
         </Link>
       )}
-      <h1 className='h3 mb-2 text-gray-800'>Caixa - {cashier.name}</h1>
-      <p className='mb-4'>Lista de comandas em aberto.</p>
+      <h1 className='h3 mb-2 text-gray-800'>Cashier - {cashier.name}</h1>
+      <p className='mb-4'>Tickets opened.</p>
 
       <div className='card shadow mb-4'>
         <div className='card-body'>

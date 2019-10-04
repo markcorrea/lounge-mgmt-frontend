@@ -90,7 +90,7 @@ class AsyncClientSearch extends React.Component {
           id='asyncClientSearchInput'
           type='text'
           className='form-control form-control-user'
-          placeholder='Digite o nome do cliente'
+          placeholder='Insert client name'
           value={this.state.search}
           onChange={this.handleInputChange}
           name='clientInput'

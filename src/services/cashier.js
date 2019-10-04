@@ -89,7 +89,7 @@ const payProduct = body => {
       return response
     })
     .catch(error => {
-      showMessage('Houve um erro ao efetuar o pagamento', 'error')
+      showMessage('Error: could not register payment.', 'error')
       console.log('erro', error.response.status)
       return false
     })
