@@ -6,11 +6,11 @@ This project is available accessing the Netlify link:
 Project Overview:
 
 Lounge Management focuses on small bars and shops. Its interface allows the user to keep track of the inventory while serving the clients and the tables. 
-It was built to be used by three types of users: the waiter, the barman and the cashier. Each one has a specific role inside the system:
+It was built to be used by three types of users: the attendant, the barman and the cashier. Each one has a specific role inside the system:
 
-- Waiters: access the system normally in the cellphone, as he walks around all the time. Once the client orders something, the waiter will create a new ticket for that table, or access the existing ticket, and register a new order on it. Once he completes the order, a new request is sent to the bar to get that order ready.
+- Attendants: access the system normally in the cellphone, as he walks around all the time. Once the client orders something, the attendant will create a new ticket for that table, or access the existing ticket, and register a new order on it. Once he completes the order, a new request is sent to the bar to get that order ready.
 
-- Terminals: usually the barman, keeps the system opened (normally desktop). As soon as the waiter orders something, a notification pops up on the screen and the barman is able to prepare the order. Once the order is ready, the barman swipes the order out of the screen, and the waiter receives a notification that it's ready to serve the order. In our case, we have three possible terminals: the barman (serves the drinks), the cashiers (chocolates, candy, etc) and Joseph (the guy responsible for food).
+- Terminals: usually the barman, keeps the system opened (normally desktop). As soon as the attendant orders something, a notification pops up on the screen and the barman is able to prepare the order. Once the order is ready, the barman swipes the order out of the screen, and the attendant receives a notification that it's ready to serve the order. In our case, we have three possible terminals: the barman (serves the drinks), the cashiers (chocolates, candy, etc) and Joseph (the guy responsible for food).
 
 - Cashier: opens the system in a desktop terminal. The cashier has access to all the remaining tickets and also can register some small orders (like chocolate and candy). The client goes to the cashier and says the number of the table. The cashier can show a list of all the orders and can charge the entire value or just some items (in case more than one person will pay the bill). In the end, the cashier goes to the balance screen to check everything sold in that shift and closes the cashier.
 
@@ -97,3 +97,7 @@ login: cashier@loungemgmt.com
 Terminal:
 login: terminal@loungemgmt.com
 
+Attendant:
+login: attendant@loungemgmt.com
+
+Password for all these logins: 12345678

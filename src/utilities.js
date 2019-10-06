@@ -40,7 +40,7 @@ const verifyResponseMessage = result => {
   }
 }
 
-const toCurrencyReal = value => `R$ ${value.toFixed(2)}`
+const toCurrencyReal = value => `$ ${value.toFixed(2)}`
 
 export {
   formatDate,
