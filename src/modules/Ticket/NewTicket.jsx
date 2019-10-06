@@ -45,7 +45,7 @@ class NewTicket extends React.Component {
           className='alert alert-danger alert-dismissible fade show'
           role='alert'
         >
-          <strong>Opa!!</strong> A mesa já está cadastrada.
+          <strong>Oops!!</strong> Ticket already created. Choose another number.
           <button
             type='button'
             className='close'
@@ -56,7 +56,7 @@ class NewTicket extends React.Component {
           </button>
         </div>
         <div className='row d-sm-flex align-items-center justify-content-between mb-4'>
-          <h1 className='h3 mb-0 text-gray-800'>Criar Comanda</h1>
+          <h1 className='h3 mb-0 text-gray-800'>Create Ticket</h1>
         </div>
         <div className='row'>
           <div style={{ margin: '0 auto' }} className='form-group'>
@@ -64,7 +64,7 @@ class NewTicket extends React.Component {
               type='number'
               className='form-control form-control-user'
               id='numero'
-              placeholder='Número da comanda'
+              placeholder='Ticket number'
               value={this.state.number}
               onChange={this.handleInputChange}
               name='number'
@@ -83,7 +83,7 @@ class NewTicket extends React.Component {
             >
               <i className='fas fa-plus' />
             </span>
-            <span className='text'>Salvar</span>
+            <span className='text'>Create</span>
           </a>
         </div>
       </Fragment>

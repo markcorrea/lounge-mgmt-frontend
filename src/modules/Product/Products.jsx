@@ -85,7 +85,7 @@ const Products = ({ history }) => {
       </Link>
       <h1 className='h3 mb-2 text-gray-800'>Products</h1>
       <p className='mb-4'>
-        List of available products. Filtering can make it easier.
+        List of available products. Use the search field to filter.
       </p>
 
       <div className='card shadow mb-4'>

@@ -56,7 +56,7 @@ const RenderRows = ({
     ))}
     {data.length < 1 && (
       <tr>
-        <td colSpan={6}>Não há itens cadastrados.</td>
+        <td colSpan={6}>No items registered.</td>
       </tr>
     )}
   </Fragment>
@@ -85,8 +85,8 @@ const DataTable = props => {
         <thead>
           <tr>
             <RenderHeaders columns={props.columns} />
-            {props.onEdit && <th>Editar</th>}
-            {props.onDelete && <th>Excluir</th>}
+            {props.onEdit && <th>Edit</th>}
+            {props.onDelete && <th>Delete</th>}
           </tr>
         </thead>
         <tbody>

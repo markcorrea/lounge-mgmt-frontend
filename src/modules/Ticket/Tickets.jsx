@@ -49,7 +49,7 @@ const Ticket = () => {
 
       <div className='row'>
         <div className='col-md-6 col-sm-12'>
-          <h1 className='h3 mb-30 text-gray-800'>Comandas</h1>
+          <h1 className='h3 mb-30 text-gray-800'>Tickets</h1>
         </div>
         <div className='col-md-6 col-sm-12'>
           <Link
@@ -62,7 +62,7 @@ const Ticket = () => {
             >
               <i className='fas fa-plus' />
             </span>
-            <span className='text'>Nova Comanda</span>
+            <span className='text'>New ticket</span>
           </Link>
         </div>
       </div>
@@ -83,7 +83,7 @@ const Ticket = () => {
         ) : loading ? (
           <Spinner />
         ) : (
-          <div style={{ margin: '20px auto' }}>Não há comandas cadastradas</div>
+          <div style={{ margin: '20px auto' }}>No tickets registered.</div>
         )}
       </div>
     </Fragment>

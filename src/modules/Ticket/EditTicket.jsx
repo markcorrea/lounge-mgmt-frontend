@@ -13,7 +13,7 @@ import services from '@services'
 import { showMessage, toCurrencyReal, openModal } from '@utilities'
 
 const InputModalInformation = () => {
-  return `Número da nova mesa:`
+  return `New table number:`
 }
 
 class EditTicket extends React.Component {
@@ -121,13 +121,13 @@ class EditTicket extends React.Component {
           onClick={() => openModal('inputModal')}
           className='btn btn-success btn-icon-split'
         >
-          <span className='text'>Cange table</span>
+          <span className='text'>Change table</span>
         </button>
         <h1 className='h3 text-gray-800'>
           Edit ticket {this.props.match.params.uniqueNumber}
         </h1>
         <p className='mb-4'>
-          Cliente:{' '}
+          Client:{' '}
           {this.state.ticket.name || <InlineButton click={this.toggleModal} />}
         </p>
         <AsyncProductSearch
