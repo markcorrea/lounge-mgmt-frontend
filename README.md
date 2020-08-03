@@ -1,7 +1,7 @@
 # Lounge Management - Frontend
 
 This project is available accessing the Netlify link:
-- https://loungemgmt.netlify.com
+- https://loungemgmt.netlify.app
 
 Project Overview:
 
