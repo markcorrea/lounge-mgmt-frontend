@@ -65,6 +65,8 @@ DOTENV
 
 This project is installed using Node's Package Manager (NPM). If you don't have it on your machine yet, you can download it here: https://nodejs.org/en/;
 
+Also, the version used was Node v8.11.3. If your version is more recent, make sure to use nvm and change to this version. Otherwise this may not work properly.
+
 To do so, you have to use Linux or MAC's Terminal. If you are using Windows, the command prompt won't work. I recommend downloading Git Bash.
 
 This project contains a package.json file, which means that the necessary libraries will be installed once you type the specified command. Being so, please go to the Terminal and access the root file of your project. Once done, run "npm install".
